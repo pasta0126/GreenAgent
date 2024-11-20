@@ -1,0 +1,7 @@
+
+pandas
+sqlalchemy
+pymysql
+sentence-transformers
+faiss-cpu
+
