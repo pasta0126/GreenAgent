@@ -3,11 +3,11 @@ import requests
 
 API_URL = "http://192.168.1.20:8000"  # URL de tu API
 
-st.title("Green Agent - Bsqueda de Incidencias")
-st.write("Introduce una descripcin para buscar soluciones basadas en incidencias previas.")
+st.title("Green Agent - Búsqueda de Incidencias")
+st.write("Introduce una descripción para buscar soluciones basadas en incidencias previas.")
 
-query = st.text_input("Descripcin del problema:")
-top_k = st.slider("Nmero de resultados", 1, 10, 3)
+query = st.text_input("Descripción del problema:")
+top_k = st.slider("Número de resultados", 1, 10, 3)
 
 if st.button("Buscar"):
     if query:
@@ -17,13 +17,19 @@ if st.button("Buscar"):
             if results:
                 st.write("### Resultados Encontrados:")
                 for result in results:
-                    st.write(f"**Descripcin**: {result['descripcion']}")
-                    st.write(f"**Resolucin**: {result['resolucion'] or 'No disponible'}")
+                    st.write(f"**ID**: {result['id']}")
+                    st.write(f"**Usuario**: {result['usuario']}")
+                    st.write(f"**Área**: {result['area']}")
+                    st.write(f"**Criticidad**: {result['criticidad']}")
+                    st.write(f"**Descripción**: {result['descripcion']}")
+                    st.write(f"**Fecha de Incidencia**: {result['fecha_incidencia']}")
+                    st.write(f"**Resolución**: {result['resolucion'] or 'No disponible'}")
+                    st.write(f"**Fecha de Resolución**: {result['fecha_resolucion'] or 'No disponible'}")
+                    st.write(f"**Comentarios**: {result['comentarios'] or 'No disponible'}")
                     st.write("---")
             else:
                 st.warning("No se encontraron resultados.")
         else:
             st.error("Error al conectar con la API.")
     else:
-        st.warning("Por favor, introduce una descripcin del problema.")
-
+        st.warning("Por favor, introduce una descripción del problema.")

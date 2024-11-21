@@ -1,23 +1,22 @@
 import faiss
 import numpy as np
 import json
+import os
 
-# Cargar embeddings
-with open("incidencias_with_embeddings.json", "r") as file:
+json_path = os.path.join("..", "api", "data", "incidencias_with_embeddings.json")
+
+faiss_index_path = os.path.join("..", "api", "data", "incidencias_index.faiss")
+
+with open(json_path, "r") as file:
     data = json.load(file)
 
-# Crear ndice FAISS
 dimension = len(data[0]['embedding'])
 index = faiss.IndexFlatL2(dimension)
 
-# Convertir embeddings a matriz NumPy
 embeddings = np.array([item['embedding'] for item in data]).astype('float32')
 
-# Agregar embeddings al ndice
 index.add(embeddings)
 
-# Guardar ndice
-faiss.write_index(index, "incidencias_index.faiss")
+faiss.write_index(index, faiss_index_path)
 
-print("ndice FAISS creado y guardado.")
-
+print(f"Índice FAISS creado y guardado en {faiss_index_path}.")

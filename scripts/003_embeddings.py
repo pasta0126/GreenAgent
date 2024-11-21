@@ -1,18 +1,18 @@
 from sentence_transformers import SentenceTransformer
 import numpy as np
 import pandas as pd
+import os
 
-# Cargar datos
-data = pd.read_csv("incidencias.csv")
+csv_path = os.path.join("..", "api", "data", "incidencias.csv")
 
-# Modelo para embeddings
+data = pd.read_csv(csv_path)
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Generar embeddings para descripciones y resoluciones
 data['embedding'] = data['descripcion'].apply(lambda x: model.encode(x).tolist())
 
-# Guardar embeddings en un archivo
-data.to_json("incidencias_with_embeddings.json", orient="records")
+json_path = os.path.join("..", "api", "data", "incidencias_with_embeddings.json")
 
-print("Embeddings generados y guardados en incidencias_with_embeddings.json")
+data.to_json(json_path, orient="records")
 
+print(f"Embeddings generados y guardados en {json_path}")

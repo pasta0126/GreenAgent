@@ -1,22 +1,19 @@
 from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
+import os
 
-# Cargar modelo de embeddings
+faiss_index_path = os.path.join("..", "api", "data", "incidencias_index.faiss")
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Cargar ndice FAISS
-index = faiss.read_index("incidencias_index.faiss")
+index = faiss.read_index(faiss_index_path)
 
-# Consulta
-query = "Error al iniciar sesin"
-query_embedding = model.encode([query])[0].astype('float32')  # Generar embedding
+query = "Error al iniciar sesión"
+query_embedding = model.encode([query])[0].astype('float32')
 
-# Buscar en el ndice
 distances, indices = index.search(np.array([query_embedding]), k=3)
 
-# Mostrar resultados
-print("Resultados ms similares:")
+print("Resultados más similares:")
 for idx, dist in zip(indices[0], distances[0]):
-    print(f"ndice: {idx}, Distancia: {dist}")
-
+    print(f"Índice: {idx}, Distancia: {dist}")

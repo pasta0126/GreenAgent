@@ -1,17 +1,15 @@
 from sqlalchemy import create_engine
 import pandas as pd
+import os
 
-# Configuracin de la conexin
 engine = create_engine("mysql+pymysql://testuser:testpassword@localhost:3333/testdb")
 
-# Consulta para obtener los datos
-query = "SELECT id, descripcion, resolucion FROM incidencias"
+query = "SELECT id, usuario, area, criticidad, descripcion, fecha_incidencia, resolucion, fecha_resolucion, comentarios FROM incidencias"
 
-# Leer datos
 data = pd.read_sql(query, engine)
 
-# Guardar los datos en un archivo CSV para referencia
-data.to_csv("incidencias.csv", index=False)
+output_path = os.path.join("..", "api", "data", "incidencias.csv")
 
-print("Datos extrados y guardados en incidencias.csv")
+data.to_csv(output_path, index=False)
 
+print(f"Datos extraídos y guardados en {output_path}")
