@@ -23,98 +23,98 @@ areas = [
 
 criticidades = ['Muy Baja', 'Baja', 'Media', 'Alta', 'Muy Alta', 'Crítica']
 
-descripciones = [
-    f"Fallo detectado en el sistema de {area.lower()} debido a sobrecarga térmica."
-    f"Error crítico en la calibración de sensores en {area.lower()}."
-    f"Interferencia electromagnética afecta la operación en {area.lower()}."
-    f"Fallo en la conexión de datos con el módulo de {area.lower()}."
-    f"Anomalía detectada en los sistemas de comunicación de {area.lower()}."
-    f"Desviación en los parámetros de presión en el sistema de {area.lower()}."
-    f"Bloqueo en la unidad de control principal de {area.lower()}."
-    f"Corrupción de datos en los registros del sistema de {area.lower()}."
-    f"Temperaturas fuera del rango permitido en el área de {area.lower()}."
-    f"Pérdida de energía en el módulo de soporte de {area.lower()}."
-    f"Fuga detectada en los conductos de refrigeración de {area.lower()}."
-    f"Retraso significativo en la sincronización de {area.lower()}."
-    f"Error en la secuencia de arranque del sistema de {area.lower()}."
-    f"Desalineación de componentes estructurales en {area.lower()}."
-    f"Impacto inesperado afecta la estabilidad de {area.lower()}."
-    f"Oscilaciones gravitatorias detectadas en el entorno de {area.lower()}."
-    f"Incompatibilidad entre módulos de {area.lower()} tras actualización."
-    f"Fallo en el suministro de oxígeno en la zona de {area.lower()}."
-    f"Radiación cósmica afecta las operaciones en {area.lower()}."
-    f"Error en la transmisión de comandos al sistema de {area.lower()}."
-    f"Aumento inesperado de la presión en el módulo de {area.lower()}."
-    f"Desactivación involuntaria del sistema automatizado de {area.lower()}."
-    f"Contaminación biológica detectada en el área de {area.lower()}."
-    f"Fallo en el módulo de terraformación asociado a {area.lower()}."
-    f"Inestabilidad del reactor de energía afecta {area.lower()}."
-    f"Errores repetidos en los sensores de monitoreo de {area.lower()}."
-    f"Interferencia de ondas gravitatorias en el sistema de {area.lower()}."
-    f"Anomalía en la distribución de recursos para {area.lower()}."
-    f"Mal funcionamiento en el sistema de soporte vital de {area.lower()}."
-    f"Problemas de navegación afectan las operaciones en {area.lower()}."
-    f"Inconsistencias detectadas en los datos de {area.lower()}."
-    f"Fallo en el mecanismo de extracción de {area.lower()}."
-    f"Despresurización parcial en el entorno de {area.lower()}."
-    f"Problemas en la gestión de residuos en el módulo de {area.lower()}."
-    f"Obstrucción en los sistemas de ventilación de {area.lower()}."
-    f"Problemas de aislamiento térmico en la zona de {area.lower()}."
-    f"Fallo crítico en los sistemas de propulsión asociados a {area.lower()}."
-    f"Desgaste acelerado en componentes esenciales de {area.lower()}."
-    f"Señales espurias detectadas en los sistemas de {area.lower()}."
-    f"Errores en el software de control de {area.lower()}."
-    f"Fallo en el protocolo de emergencia en {area.lower()}."
-    f"Obstrucción de los conductos de oxígeno en el módulo de {area.lower()}."
-    f"Sobrecalentamiento en los sistemas principales de {area.lower()}."
-    f"Interrupción en el flujo de energía hacia {area.lower()}."
-    f"Contaminación detectada en el área de cultivo de {area.lower()}."
-    f"Error en la simulación de gravedad artificial en {area.lower()}."
-    f"Desgaste en los sistemas de blindaje de {area.lower()}."
-    f"Problemas en el mantenimiento de drones en {area.lower()}."
-    f"Fallo en la transmisión de telemetría desde {area.lower()}."
-    f"Anomalías en la gestión de almacenamiento en {area.lower()}."
-    f"Malfuncionamiento en los mecanismos robóticos de {area.lower()}."
-    f"Fallo en el sistema de anclaje en la estación de {area.lower()}."
-    f"Desajuste en los controles de presión de {area.lower()}."
-    f"Problemas de latencia en la red de comunicación de {area.lower()}."
-    f"Radiación cósmica impacta el núcleo operativo de {area.lower()}."
-    f"Interferencia magnética en los módulos críticos de {area.lower()}."
-    f"Pérdida de conexión con la nave asignada a {area.lower()}."
-    f"Problemas de calibración en los instrumentos de {area.lower()}."
-    f"Errores recurrentes en el módulo de inteligencia artificial de {area.lower()}."
-    f"Fallo en la compuerta de acceso del módulo de {area.lower()}."
-    f"Aumento de vibraciones en los sistemas estructurales de {area.lower()}."
-    f"Fuga de gas inerte en el entorno de {area.lower()}."
-    f"Problemas de redundancia en los sistemas de respaldo de {area.lower()}."
-    f"Desincronización en los relojes de misión en {area.lower()}."
-    f"Impacto de micrometeoritos afecta la operatividad de {area.lower()}."
-    f"Problemas en el despliegue de paneles solares en {area.lower()}."
-    f"Oscilaciones de temperatura extrema en el módulo de {area.lower()}."
-    f"Fallo en el ensamblaje de piezas críticas para {area.lower()}."
-    f"Obstrucción en los sistemas de filtrado de aire en {area.lower()}."
-    f"Error en la calibración del espectrómetro de {area.lower()}."
-    f"Pérdida temporal de control sobre los mecanismos de {area.lower()}."
-    f"Fallo en los sistemas de reciclaje en el módulo de {area.lower()}."
-    f"Problemas en el sistema de inteligencia predictiva de {area.lower()}."
-    f"Impacto inesperado de ondas de choque en {area.lower()}."
-    f"Error crítico en los sistemas de almacenamiento de datos en {area.lower()}."
-    f"Mal funcionamiento en los protocolos de terraformación de {area.lower()}."
-    f"Fallo en el suministro de energía al área de {area.lower()}."
-    f"Problemas en la gestión de tráfico interplanetario para {area.lower()}."
-    f"Daños estructurales en la estación principal de {area.lower()}."
-    f"Sobrecalentamiento de componentes electrónicos en {area.lower()}."
-    f"Fallo en los sistemas de monitoreo ambiental de {area.lower()}."
-    f"Interferencia de partículas subatómicas afecta {area.lower()}."
-    f"Problemas de actualización en los sistemas operativos de {area.lower()}."
-    f"Fallo en la sincronización de flotas asignadas a {area.lower()}."
-    f"Incompatibilidad de versiones en el software de {area.lower()}."
-    f"Mal funcionamiento en los mecanismos de seguridad de {area.lower()}."
-    f"Pérdida de señal en el sistema de radar para {area.lower()}."
-    f"Errores en el control remoto de drones asignados a {area.lower()}."
-    f"Problemas en la emisión de permisos de acceso en {area.lower()}."
-    for area in areas
-]
+descripciones = []
+for area in areas:
+    descripciones.extend([
+        f"Fallo detectado en el sistema de {area.lower()} debido a sobrecarga térmica.",
+        f"Error crítico en la calibración de sensores en {area.lower()}.",
+        f"Interferencia electromagnética afecta la operación en {area.lower()}.",
+        f"Fallo en la conexión de datos con el módulo de {area.lower()}.",
+        f"Anomalía detectada en los sistemas de comunicación de {area.lower()}.",
+        f"Desviación en los parámetros de presión en el sistema de {area.lower()}.",
+        f"Bloqueo en la unidad de control principal de {area.lower()}.",
+        f"Corrupción de datos en los registros del sistema de {area.lower()}.",
+        f"Temperaturas fuera del rango permitido en el área de {area.lower()}.",
+        f"Pérdida de energía en el módulo de soporte de {area.lower()}.",
+        f"Fuga detectada en los conductos de refrigeración de {area.lower()}.",
+        f"Retraso significativo en la sincronización de {area.lower()}.",
+        f"Error en la secuencia de arranque del sistema de {area.lower()}.",
+        f"Desalineación de componentes estructurales en {area.lower()}.",
+        f"Impacto inesperado afecta la estabilidad de {area.lower()}.",
+        f"Oscilaciones gravitatorias detectadas en el entorno de {area.lower()}.",
+        f"Incompatibilidad entre módulos de {area.lower()} tras actualización.",
+        f"Fallo en el suministro de oxígeno en la zona de {area.lower()}.",
+        f"Radiación cósmica afecta las operaciones en {area.lower()}.",
+        f"Error en la transmisión de comandos al sistema de {area.lower()}.",
+        f"Aumento inesperado de la presión en el módulo de {area.lower()}.",
+        f"Desactivación involuntaria del sistema automatizado de {area.lower()}.",
+        f"Contaminación biológica detectada en el área de {area.lower()}.",
+        f"Fallo en el módulo de terraformación asociado a {area.lower()}.",
+        f"Inestabilidad del reactor de energía afecta {area.lower()}.",
+        f"Errores repetidos en los sensores de monitoreo de {area.lower()}.",
+        f"Interferencia de ondas gravitatorias en el sistema de {area.lower()}.",
+        f"Anomalía en la distribución de recursos para {area.lower()}.",
+        f"Mal funcionamiento en el sistema de soporte vital de {area.lower()}.",
+        f"Problemas de navegación afectan las operaciones en {area.lower()}.",
+        f"Inconsistencias detectadas en los datos de {area.lower()}.",
+        f"Fallo en el mecanismo de extracción de {area.lower()}.",
+        f"Despresurización parcial en el entorno de {area.lower()}.",
+        f"Problemas en la gestión de residuos en el módulo de {area.lower()}.",
+        f"Obstrucción en los sistemas de ventilación de {area.lower()}.",
+        f"Problemas de aislamiento térmico en la zona de {area.lower()}.",
+        f"Fallo crítico en los sistemas de propulsión asociados a {area.lower()}.",
+        f"Desgaste acelerado en componentes esenciales de {area.lower()}.",
+        f"Señales espurias detectadas en los sistemas de {area.lower()}.",
+        f"Errores en el software de control de {area.lower()}.",
+        f"Fallo en el protocolo de emergencia en {area.lower()}.",
+        f"Obstrucción de los conductos de oxígeno en el módulo de {area.lower()}.",
+        f"Sobrecalentamiento en los sistemas principales de {area.lower()}.",
+        f"Interrupción en el flujo de energía hacia {area.lower()}.",
+        f"Contaminación detectada en el área de cultivo de {area.lower()}.",
+        f"Error en la simulación de gravedad artificial en {area.lower()}.",
+        f"Desgaste en los sistemas de blindaje de {area.lower()}.",
+        f"Problemas en el mantenimiento de drones en {area.lower()}.",
+        f"Fallo en la transmisión de telemetría desde {area.lower()}.",
+        f"Anomalías en la gestión de almacenamiento en {area.lower()}.",
+        f"Malfuncionamiento en los mecanismos robóticos de {area.lower()}.",
+        f"Fallo en el sistema de anclaje en la estación de {area.lower()}.",
+        f"Desajuste en los controles de presión de {area.lower()}.",
+        f"Problemas de latencia en la red de comunicación de {area.lower()}.",
+        f"Radiación cósmica impacta el núcleo operativo de {area.lower()}.",
+        f"Interferencia magnética en los módulos críticos de {area.lower()}.",
+        f"Pérdida de conexión con la nave asignada a {area.lower()}.",
+        f"Problemas de calibración en los instrumentos de {area.lower()}.",
+        f"Errores recurrentes en el módulo de inteligencia artificial de {area.lower()}.",
+        f"Fallo en la compuerta de acceso del módulo de {area.lower()}.",
+        f"Aumento de vibraciones en los sistemas estructurales de {area.lower()}.",
+        f"Fuga de gas inerte en el entorno de {area.lower()}.",
+        f"Problemas de redundancia en los sistemas de respaldo de {area.lower()}.",
+        f"Desincronización en los relojes de misión en {area.lower()}.",
+        f"Impacto de micrometeoritos afecta la operatividad de {area.lower()}.",
+        f"Problemas en el despliegue de paneles solares en {area.lower()}.",
+        f"Oscilaciones de temperatura extrema en el módulo de {area.lower()}.",
+        f"Fallo en el ensamblaje de piezas críticas para {area.lower()}.",
+        f"Obstrucción en los sistemas de filtrado de aire en {area.lower()}.",
+        f"Error en la calibración del espectrómetro de {area.lower()}.",
+        f"Pérdida temporal de control sobre los mecanismos de {area.lower()}.",
+        f"Fallo en los sistemas de reciclaje en el módulo de {area.lower()}.",
+        f"Problemas en el sistema de inteligencia predictiva de {area.lower()}.",
+        f"Impacto inesperado de ondas de choque en {area.lower()}.",
+        f"Error crítico en los sistemas de almacenamiento de datos en {area.lower()}.",
+        f"Mal funcionamiento en los protocolos de terraformación de {area.lower()}.",
+        f"Fallo en el suministro de energía al área de {area.lower()}.",
+        f"Problemas en la gestión de tráfico interplanetario para {area.lower()}.",
+        f"Daños estructurales en la estación principal de {area.lower()}.",
+        f"Sobrecalentamiento de componentes electrónicos en {area.lower()}.",
+        f"Fallo en los sistemas de monitoreo ambiental de {area.lower()}.",
+        f"Interferencia de partículas subatómicas afecta {area.lower()}.",
+        f"Problemas de actualización en los sistemas operativos de {area.lower()}.",
+        f"Fallo en la sincronización de flotas asignadas a {area.lower()}.",
+        f"Incompatibilidad de versiones en el software de {area.lower()}.",
+        f"Mal funcionamiento en los mecanismos de seguridad de {area.lower()}.",
+        f"Pérdida de señal en el sistema de radar para {area.lower()}.",
+        f"Errores en el control remoto de drones asignados a {area.lower()}.",
+        f"Problemas en la emisión de permisos de acceso en {area.lower()}."])
 
 resoluciones = [
     "Ajuste de parámetros térmicos realizados con éxito.",
@@ -318,14 +318,11 @@ for _ in range(50000):
     criticidad = random.choice(criticidades)
 
     descripcion = random.choice(descripciones)
-
-    resolucion = " ".join(random.sample(resoluciones, 5)) if random.random() > 0.5 else None
-    comentarios_finales = " ".join(random.sample(comentarios, 3)) if random.random() > 0.3 else None
+    resolucion = random.choice(resoluciones) if random.random() > 0.5 else None
+    comentarios_finales = random.choice(comentarios) if random.random() > 0.3 else None
 
     fecha_incidencia = faker.date_time_between(start_date="-2y", end_date="now")
     fecha_resolucion = (fecha_incidencia + timedelta(days=random.randint(1, 30))) if resolucion else None
-
-    comentarios_finales = random.choice(comentarios) if random.random() > 0.3 else None
 
     query = """
     INSERT INTO incidencias (usuario, area, criticidad, descripcion, fecha_incidencia, resolucion, fecha_resolucion, comentarios)
