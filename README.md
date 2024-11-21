@@ -143,25 +143,10 @@ Para manejar un crecimiento significativo en la base de datos:
 
 ---
 
-1. Ejecutar tmux
-tmux new -s green-agent
+## Levantar servicios
 
-2. ejecutar la api
-uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+   ./run_services.sh
 
-3. ctrl + B C
-para el cambio de tab
+## Detener servicios
 
-4. ejecutar app
-streamlit run app.py
-
-5. Ctrl + B N
-para cambiar de tab
-
-6. exit
-salir de tmux o del tab
-
----
-
-./run_services.sh
-
+   ./stop_services.sh
