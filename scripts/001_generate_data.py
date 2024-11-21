@@ -114,7 +114,7 @@ descripciones = [
     f"Errores en el control remoto de drones asignados a {area.lower()}."
     f"Problemas en la emisión de permisos de acceso en {area.lower()}."
     for area in areas
-] * 10
+] * 3
 
 resoluciones = [
     "Ajuste de parámetros térmicos realizados con éxito.",
@@ -207,7 +207,7 @@ resoluciones = [
     "El software de análisis de datos fue mejorado con mayor precisión.",
     "Los daños estructurales fueron reparados por robots autónomos.",
     "El fallo en los protocolos de anclaje fue resuelto."
-] * 10
+] * 3
 
 comentarios = [
     "Se requiere revisión periódica del equipo afectado.",
@@ -305,11 +305,11 @@ comentarios = [
     "El problema se solucionó, pero se planean revisiones regulares para evitar su recurrencia.",
     "El módulo afectado estará en observación intensiva durante los próximos días.",
     "Se identificaron posibles riesgos asociados que serán investigados a fondo."
-] * 10
+] * 3
 
 cursor = connection.cursor()
 
-for _ in range(5000):
+for _ in range(50000):
     nombre = faker.first_name()
     apellido = faker.last_name()
     usuario = (nombre[:3] + apellido[:3]).lower()
