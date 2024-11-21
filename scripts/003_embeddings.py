@@ -9,7 +9,10 @@ data = pd.read_csv(csv_path)
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-data['embedding'] = data['descripcion'].apply(lambda x: model.encode(x).tolist())
+data['embedding'] = data.apply(
+    lambda x: model.encode(f"{x['descripcion']} {x['resolucion'] or ''} {x['comentarios'] or ''}").tolist(),
+    axis=1
+)
 
 json_path = os.path.join("..", "api", "data", "incidencias_with_embeddings.json")
 

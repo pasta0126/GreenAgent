@@ -11,8 +11,18 @@ class FaissService:
         self.model = SentenceTransformer("all-MiniLM-L6-v2")
 
     def search_similar(self, query, top_k):
+        # Generar embedding de la consulta
         query_embedding = self.model.encode([query])[0].astype("float32")
+        # Realizar la búsqueda
         distances, indices = self.index.search(np.array([query_embedding]), k=top_k)
-        results = [self.data[idx] for idx in indices[0]]
+        # Retornar resultados
+        results = [
+            {
+                "descripcion": self.data[idx]["descripcion"],
+                "resolucion": self.data[idx]["resolucion"],
+                "comentarios": self.data[idx]["comentarios"],
+                "distancia": dist,
+            }
+            for idx, dist in zip(indices[0], distances[0])
+        ]
         return results
-

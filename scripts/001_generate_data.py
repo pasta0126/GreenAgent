@@ -114,7 +114,7 @@ descripciones = [
     f"Errores en el control remoto de drones asignados a {area.lower()}."
     f"Problemas en la emisión de permisos de acceso en {area.lower()}."
     for area in areas
-] * 3
+]
 
 resoluciones = [
     "Ajuste de parámetros térmicos realizados con éxito.",
@@ -207,7 +207,7 @@ resoluciones = [
     "El software de análisis de datos fue mejorado con mayor precisión.",
     "Los daños estructurales fueron reparados por robots autónomos.",
     "El fallo en los protocolos de anclaje fue resuelto."
-] * 3
+]
 
 comentarios = [
     "Se requiere revisión periódica del equipo afectado.",
@@ -305,7 +305,7 @@ comentarios = [
     "El problema se solucionó, pero se planean revisiones regulares para evitar su recurrencia.",
     "El módulo afectado estará en observación intensiva durante los próximos días.",
     "Se identificaron posibles riesgos asociados que serán investigados a fondo."
-] * 3
+]
 
 cursor = connection.cursor()
 
@@ -316,9 +316,13 @@ for _ in range(50000):
 
     area = random.choice(areas)
     criticidad = random.choice(criticidades)
+
     descripcion = random.choice(descripciones)
+
+    resolucion = " ".join(random.sample(resoluciones, 5)) if random.random() > 0.5 else None
+    comentarios_finales = " ".join(random.sample(comentarios, 3)) if random.random() > 0.3 else None
+
     fecha_incidencia = faker.date_time_between(start_date="-2y", end_date="now")
-    resolucion = random.choice(resoluciones) if random.random() > 0.5 else None
     fecha_resolucion = (fecha_incidencia + timedelta(days=random.randint(1, 30))) if resolucion else None
 
     comentarios_finales = random.choice(comentarios) if random.random() > 0.3 else None
