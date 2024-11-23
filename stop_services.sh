@@ -2,7 +2,6 @@
 
 echo "Deteniendo servicios de Green Agent..."
 
-# Detener Streamlit
 streamlit_pid=$(ps aux | grep streamlit | grep -v grep | awk '{print $2}')
 if [ -n "$streamlit_pid" ]; then
     echo "Deteniendo Streamlit (PID: $streamlit_pid)..."
@@ -12,7 +11,6 @@ else
     echo "Streamlit no está corriendo."
 fi
 
-# Detener Uvicorn
 uvicorn_pid=$(ps aux | grep uvicorn | grep -v grep | awk '{print $2}')
 if [ -n "$uvicorn_pid" ]; then
     echo "Deteniendo Uvicorn (PID: $uvicorn_pid)..."
