@@ -153,8 +153,10 @@ Para manejar un crecimiento significativo en la base de datos:
 
 ## Levantar servicios
 
+   chmod +x ./run_services.sh
    ./run_services.sh
 
 ## Detener servicios
 
+   chmod +x ./stop_services.sh
    ./stop_services.sh

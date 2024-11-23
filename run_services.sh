@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_DIR="/Users/pasta0126/docker/GreenAgent"
+API_DIR="/Users/pasta0126/docker/GreenAgent/api"
 WEB_DIR="/Users/pasta0126/docker/GreenAgent/web"
 
 source "$API_DIR/venv/bin/activate"
