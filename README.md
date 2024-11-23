@@ -145,7 +145,7 @@ Para manejar un crecimiento significativo en la base de datos:
 
 ## Activar Env
 
-   source /Users/pasta0126/docker/green-agent/venv/bin/activate
+   source /Users/pasta0126/docker/GreenAgent/venv/bin/activate
 
 ## Desactivar Env
 
