@@ -309,7 +309,7 @@ comentarios = [
 
 cursor = connection.cursor()
 
-for _ in range(50000):
+for _ in range(10000):
     nombre = faker.first_name()
     apellido = faker.last_name()
     usuario = (nombre[:3] + apellido[:3]).lower()

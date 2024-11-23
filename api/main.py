@@ -12,7 +12,7 @@ faiss_service = FaissService(
 
 @app.get("/")
 def read_root():
-    return {"message": "API para bsqueda de incidencias"}
+    return {"message": "API para búsqueda de incidencias"}
 
 @app.post("/search")
 def search(query: Query):
